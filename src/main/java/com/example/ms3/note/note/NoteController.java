@@ -22,12 +22,7 @@ public class NoteController {
         List<Note> noteList = noteRepository.findAll();
 
         if (noteList.isEmpty()) {
-            Note note = new Note();
-            note.setTitle("new title");
-            note.setContent("");
-            note.setCreateDate(LocalDateTime.now());
-
-            noteRepository.save(note);
+            saveDefault();
 
             return "redirect:/";
         }
