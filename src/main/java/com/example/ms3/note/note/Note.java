@@ -22,4 +22,5 @@ public class Note {
     private String content;
     private LocalDateTime createDate;
 
+
 }
